@@ -1,0 +1,418 @@
+select * from salary  group by total order by desc;
+select * from salary  group by total order by desc
+                                              *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from salary  group by total order by DESC
+SQL> /
+select * from salary  group by total order by DESC
+                                              *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select * from salary  group by total order by total DESC
+SQL> /
+select * from salary  group by total order by total DESC
+                                              *
+ERROR at line 1:
+ORA-00904: "TOTAL": invalid identifier 
+
+
+SQL> 00000ed
+SP2-0042: unknown command "00000ed" - rest of line ignored.
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select * from salary  group by total order by total [DESC]
+SQL> /
+select * from salary  group by total order by total [DESC]
+                                                    *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> clear screen
+SQL> desc salary;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ SRNO                                                                                NOT NULL NUMBER(2)
+ NAME                                                                                NOT NULL VARCHAR2(20)
+ GROSS                                                                                        NUMBER(5)
+ DA                                                                                           NUMBER(4)
+ HRA                                                                                          NUMBER(5)
+ CONVEYANCE                                                                                   NUMBER(5)
+ MEDICAL_EXPENSES                                                                             NUMBER(4)
+ SPECIAL                                                                                      NUMBER(4)
+ BONUS                                                                                        NUMBER(5)
+ ANNUALSAL                                                                                    NUMBER(6)
+
+SQL> select * from salary group by annualsal order by annualsal desc;
+select * from salary group by annualsal order by annualsal desc
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select name,annualsal from salary group by annualsal order by annualsal DESC;
+select name,annualsal from salary group by annualsal order by annualsal DESC
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> show erroe;
+SP2-0158: unknown SHOW option "erroe"
+SQL> show error;
+No errors.
+SQL> 
+SQL> 
+SQL> /
+select name,annualsal from salary group by annualsal order by annualsal DESC
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> clear screen;
+SQL> select name,anualsal from salary ORDER BY annualsal DESC;
+select name,anualsal from salary ORDER BY annualsal DESC
+            *
+ERROR at line 1:
+ORA-00904: "ANUALSAL": invalid identifier 
+
+
+SQL> select name,annualsal from salary ORDER BY annualsal DESC;
+
+NAME                  ANNUALSAL                                                                                                                       
+-------------------- ----------                                                                                                                       
+RAJ SHARMA                73100                                                                                                                       
+SAYAD K M                 37000                                                                                                                       
+SHARAD GANDHI             32300                                                                                                                       
+PAWAN PATIL               25000                                                                                                                       
+RIJO PAUL                 24300                                                                                                                       
+DANISH D`SOUZA            20000                                                                                                                       
+JOSEPH P                  16300                                                                                                                       
+VINUDAS K.S               15500                                                                                                                       
+AAKASH PATEL              15000                                                                                                                       
+LIJIN K C                 15000                                                                                                                       
+GANESH RAHU               14000                                                                                                                       
+
+NAME                  ANNUALSAL                                                                                                                       
+-------------------- ----------                                                                                                                       
+SINDHU J.P                 8000                                                                                                                       
+DIVYA KUMAR                8000                                                                                                                       
+DEEPTHI P.S                7999                                                                                                                       
+SHILPA R                   7734                                                                                                                       
+
+15 rows selected.
+
+SQL> desc order2;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ ORDERDATE                                                                                    DATE
+ REGION                                                                                       VARCHAR2(7)
+ REP                                                                                          VARCHAR2(8)
+ ITEM                                                                                         VARCHAR2(8)
+ UNITS                                                                                        NUMBER(2)
+ UNIT_COST                                                                                    NUMBER(5,2)
+ TOTAL                                                                                        NUMBER(6,2)
+
+SQL> select * from order2 ORDER BY orderdate ASC;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JAEDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           90       4.99      449.1                                                                                  
+22-MAY-18 WEST    THOMPSON PENCIL           32       1.99      63.68                                                                                  
+08-JUN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+25-JUN-18 CENTRAL MORGAN   PENCIL           90       4.99      449.1                                                                                  
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+12-JUL-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+15 rows selected.
+
+SQL> select * from emp order by job asc;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+
+14 rows selected.
+
+SQL> select * from order2 order by item asc;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+12-JUL-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+08-JUN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+25-JUN-18 CENTRAL MORGAN   PENCIL           90       4.99      449.1                                                                                  
+22-MAY-18 WEST    THOMPSON PENCIL           32       1.99      63.68                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+09-FEB-18 CENTRAL JAEDINE  PENCIL           36       4.99     179.64                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           90       4.99      449.1                                                                                  
+
+15 rows selected.
+
+SQL> desc dept;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ DEPTNO                                                                              NOT NULL NUMBER(2)
+ DNAME                                                                                        VARCHAR2(14)
+ LOC                                                                                          VARCHAR2(13)
+
+SQL> select deptno,dname from dept where deptno>20;
+
+    DEPTNO DNAME                                                                                                                                      
+---------- --------------                                                                                                                             
+        30 SALES                                                                                                                                      
+        40 OPERATIONS                                                                                                                                 
+
+SQL> desc emp;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ EMPNO                                                                               NOT NULL NUMBER(4)
+ ENAME                                                                                        VARCHAR2(10)
+ JOB                                                                                          VARCHAR2(9)
+ MGR                                                                                          NUMBER(4)
+ HIREDATE                                                                                     DATE
+ SAL                                                                                          NUMBER(7,2)
+ COMM                                                                                         NUMBER(7,2)
+ DEPTNO                                                                                       NUMBER(2)
+
+SQL> select * from emp where comm>sal;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+
+SQL> select * from salary where da<hra;
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS  ANNUALSAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`SOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        450          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVYA KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS  ANNUALSAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+
+15 rows selected.
+
+SQL> select * from salary where annualsal between 50000 and 80000;
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS  ANNUALSAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+
+SQL> select * from salary where srno in(6,8,12,15);
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS  ANNUALSAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+
+SQL> select * from emp where job in('MANAGER','PRESIDENT','ANALYST');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+
+6 rows selected.
+
+SQL> select units,unit_cost,item from order2 order by unit_cost asc;
+
+     UNITS  UNIT_COST ITEM                                                                                                                            
+---------- ---------- --------                                                                                                                        
+        75       1.99 PENCIL                                                                                                                          
+        29       1.99 BINDER                                                                                                                          
+        95       1.99 PENCIL                                                                                                                          
+        32       1.99 PENCIL                                                                                                                          
+        56       2.99 PENCIL                                                                                                                          
+        60       4.99 BINDER                                                                                                                          
+        36       4.99 PENCIL                                                                                                                          
+        90       4.99 PENCIL                                                                                                                          
+        35       4.99 PENCIL                                                                                                                          
+        90       4.99 PENCIL                                                                                                                          
+        60       8.99 BINDER                                                                                                                          
+
+     UNITS  UNIT_COST ITEM                                                                                                                            
+---------- ---------- --------                                                                                                                        
+        81      19.99 BINDER                                                                                                                          
+        50      19.99 BINDER                                                                                                                          
+        27      19.99 PEN                                                                                                                             
+         2        125 DESK                                                                                                                            
+
+15 rows selected.
+
+SQL> select * from order2 where region='CENTRAL';
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JAEDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           90       4.99      449.1                                                                                  
+25-JUN-18 CENTRAL MORGAN   PENCIL           90       4.99      449.1                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+7 rows selected.
+
+SQL> select * from emp where ename like '_____' and job='MANAGER';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+
+SQL> select * from emp where comm=0;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+
+SQL> select * from emp where comm="null";
+select * from emp where comm="null"
+                             *
+ERROR at line 1:
+ORA-00904: "null": invalid identifier 
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1* select * from emp where comm=NULL
+SQL> /
+
+no rows selected
+
+SQL> select * from emp where comm IS NULL;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+
+10 rows selected.
+
+SQL> select * from emp where comm=NULL
+  2  ;
+
+no rows selected
+
+SQL> select * from emp where ename like 'R%';
+
+no rows selected
+
+SQL> select * from emp where not empno=NULL;
+
+no rows selected
+
+SQL> select * from emp where not empno IS NULL;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+
+14 rows selected.
+
+SQL> select * from emp where job in('MANAGER','SALESMAN') and sal>15000;
+
+no rows selected
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 

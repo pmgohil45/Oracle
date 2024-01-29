@@ -1,0 +1,439 @@
+ed;
+SP2-0107: Nothing to save.
+SQL> select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+STUD                           TABLE                                            
+DEPT                           TABLE                                            
+EMP                            TABLE                                            
+BONUS                          TABLE                                            
+SALGRADE                       TABLE                                            
+BOOKS                          TABLE                                            
+ORDER1                         TABLE                                            
+PRODUCT                        TABLE                                            
+SALESDATA                      TABLE                                            
+BCA3                           TABLE                                            
+ORDER3                         TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+ORDER2                         TABLE                                            
+SALARY                         TABLE                                            
+A1                             TABLE                                            
+B1                             TABLE                                            
+PATEL                          VIEW                                             
+ORD_VIEW                       VIEW                                             
+EVENT                          TABLE                                            
+EVENT1                         SYNONYM                                          
+DEPARMENT                      SYNONYM                                          
+DEPARTMENT                     SYNONYM                                          
+BIN$k2UesamhRziH4p6Q/xU7Qg==$0 TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+POLICIES                       TABLE                                            
+ORDER3_VIEW                    VIEW                                             
+FV1                            VIEW                                             
+GEET_STUD                      TABLE                                            
+COMM1                          TABLE                                            
+F_V1                           VIEW                                             
+ORDER4                         SYNONYM                                          
+COLLAGE                        TABLE                                            
+BIN$d5Y8rFKKSFWyk4ATEvGblQ==$0 TABLE                                            
+BALANCE                        TABLE                                            
+RES                            TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+BIN$ZHpg25oIQI2EGCMQZBNmFg==$0 TABLE                                            
+INSERTDATA                     TABLE                                            
+
+35 rows selected.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1  -- in procedure
+  2  create or replace procedure 
+  3  stud1( a1 in number , b1 in number, c1 in number)
+  4  is
+  5  	ans number;
+  6  begin
+  7  	ans := a1 + b1 + c1;
+  8  	dbms_output.put_line(ans);
+  9* end stud1;
+SQL> /
+
+Procedure created.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1  -- in procedure use(stud1)
+  2  set serveroutput on
+  3  declate
+  4  	xa1 number := &xa1;
+  5  	xa2 number := &xa2;
+  6  	xa3 number := &xa3;
+  7  begin
+  8  	dbms_output.put_line(xa1,xa2,xa3);
+  9* end;
+SQL> /
+Enter value for xa1: 1
+old   4: 	xa1 number := &xa1;
+new   4: 	xa1 number := 1;
+Enter value for xa2: 2
+old   5: 	xa2 number := &xa2;
+new   5: 	xa2 number := 2;
+Enter value for xa3: 3
+old   6: 	xa3 number := &xa3;
+new   6: 	xa3 number := 3;
+set serveroutput on
+    *
+ERROR at line 2:
+ORA-00922: missing or invalid option 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1  -- in procedure use(stud1)
+  2  set serveroutput on
+  3  declate
+  4  	xa1 number := &xa1;
+  5  	xa2 number := &xa2;
+  6  	xa3 number := &xa3;
+  7  begin
+  8  	dbms_output.put_line(xa1,xa2,xa3);
+  9* end;
+SQL> @ e:\prakash\oracle\stud1_use.sql;
+SP2-0042: unknown command "declate" - rest of line ignored.
+SP2-0734: unknown command beginning "xa1 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa2 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa3 number..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+	dbms_output.put_line(xa1,xa2,xa3);
+	                     *
+ERROR at line 2:
+ORA-06550: line 2, column 23: 
+PLS-00201: identifier 'XA1' must be declared 
+ORA-06550: line 2, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL>  @ e:\prakash\oracle\stud1_use.sql;
+SP2-0042: unknown command "declate" - rest of line ignored.
+SP2-0734: unknown command beginning "xa1 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa2 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa3 number..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+	stud1(xa1,xa2,xa3);
+	      *
+ERROR at line 2:
+ORA-06550: line 2, column 8: 
+PLS-00201: identifier 'XA1' must be declared 
+ORA-06550: line 2, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL>  @ e:\prakash\oracle\stud1_use.sql;
+SP2-0042: unknown command "declate" - rest of line ignored.
+SP2-0734: unknown command beginning "xa1 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa2 number..." - rest of line ignored.
+SP2-0734: unknown command beginning "xa3 number..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+	stud1(xa1,xa2,xa3);
+	      *
+ERROR at line 2:
+ORA-06550: line 2, column 8: 
+PLS-00201: identifier 'XA1' must be declared 
+ORA-06550: line 2, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL>  @ e:\prakash\oracle\stud1_use.sql
+Enter value for xa1: 1
+old   2: 	xa1 number := &xa1;
+new   2: 	xa1 number := 1;
+Enter value for xa2: 2
+old   3: 	xa2 number := &xa2;
+new   3: 	xa2 number := 2;
+Enter value for xa3: 3
+old   4: 	xa3 number := &xa3;
+new   4: 	xa3 number := 3;
+6                                                                               
+
+PL/SQL procedure successfully completed.
+
+SQL>  @ e:\prakash\oracle\stud1_use.sql'
+SP2-0310: unable to open file "e:\prakash\oracle\stud1_use.sql'"
+SQL>  @ e:\prakash\oracle\stud1_use.sql;
+Enter value for xa1: 1
+old   2: 	xa1 number := &xa1;
+new   2: 	xa1 number := 1;
+Enter value for xa2: 2
+old   3: 	xa2 number := &xa2;
+new   3: 	xa2 number := 2;
+Enter value for xa3: 2
+old   4: 	xa3 number := &xa3;
+new   4: 	xa3 number := 2;
+	dbms_output.put_line('Answer : '||stud1);
+	                                  *
+ERROR at line 7:
+ORA-06550: line 7, column 36: 
+PLS-00306: wrong number or types of arguments in call to 'STUD1' 
+ORA-06550: line 7, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL>  @ e:\prakash\oracle\stud1_use.sql;
+Enter value for xa1: 11
+old   2: 	xa1 number := &xa1;
+new   2: 	xa1 number := 11;
+Enter value for xa2: 4
+old   3: 	xa2 number := &xa2;
+new   3: 	xa2 number := 4;
+Enter value for xa3: 1
+old   4: 	xa3 number := &xa3;
+new   4: 	xa3 number := 1;
+16                                                                              
+Answer :                                                                        
+
+PL/SQL procedure successfully completed.
+
+SQL> @ e:\prakash\oracle\out_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @ e:\prakash\oracle\out_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL>  @ e:\prakash\oracle\out_sum1.sql;
+Enter value for a: 1
+old   2: 	a number := &a;
+new   2: 	a number := 1;
+Enter value for b: 1
+old   3: 	b number := &b;
+new   3: 	b number := 1;
+Enter value for c: 1
+old   4: 	c number := &c;
+new   4: 	c number := 1;
+	sum1(a,b,c,ans);
+	*
+ERROR at line 7:
+ORA-06550: line 7, column 2: 
+PLS-00905: object SCOTT.SUM1 is invalid 
+ORA-06550: line 7, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1  --procedure for out parameter
+  2  create or replace procedure
+  3  sum1(s1 in number, s2 in number, s3 in number, ans out number)
+  4  is
+  5  begin
+  6  	ans = s1 + s2 + s3;
+  7* end sum1;
+SQL> /
+
+Warning: Procedure created with compilation errors.
+
+SQL>  @ e:\prakash\oracle\out_sum1.sql;
+Enter value for a: 1
+old   2: 	a number := &a;
+new   2: 	a number := 1;
+Enter value for b: 1
+old   3: 	b number := &b;
+new   3: 	b number := 1;
+Enter value for c: 1
+old   4: 	c number := &c;
+new   4: 	c number := 1;
+	sum1(a,b,c,ans1);
+	*
+ERROR at line 7:
+ORA-06550: line 7, column 2: 
+PLS-00905: object SCOTT.SUM1 is invalid 
+ORA-06550: line 7, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL> @ e:\prakash\oracle\out_pro.lst;
+
+Procedure created.
+
+SQL>  @ e:\prakash\oracle\out_sum1.sql;
+Enter value for a: 2
+old   2: 	a number := &a;
+new   2: 	a number := 2;
+Enter value for b: 2
+old   3: 	b number := &b;
+new   3: 	b number := 2;
+Enter value for c: 2
+old   4: 	c number := &c;
+new   4: 	c number := 2;
+sum :6                                                                          
+
+PL/SQL procedure successfully completed.
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL>  @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @ e:\prakash\oracle\inout_s1.sql;
+Enter value for a: 2
+old   2: 	a number := &a;
+new   2: 	a number := 2;
+Enter value for b: 3
+old   3: 	b number := &b;
+new   3: 	b number := 3;
+Enter value for c: 2
+old   4: 	c number := &c;
+new   4: 	c number := 2;
+	sum1(a,b,c);
+	*
+ERROR at line 7:
+ORA-06550: line 7, column 2: 
+PLS-00306: wrong number or types of arguments in call to 'SUM1' 
+ORA-06550: line 7, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL> @ e:\prakash\oracle\inout_s1.sql;
+Enter value for a: 1
+old   2: 	a number := &a;
+new   2: 	a number := 1;
+Enter value for b: 1
+old   3: 	b number := &b;
+new   3: 	b number := 1;
+Enter value for c: 1
+old   4: 	c number := &c;
+new   4: 	c number := 1;
+	s1(a,b,c);
+	*
+ERROR at line 6:
+ORA-06550: line 6, column 2: 
+PLS-00905: object SCOTT.S1 is invalid 
+ORA-06550: line 6, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show errer;
+SP2-0158: unknown SHOW option "errer"
+SQL> show error;
+Errors for PROCEDURE SUM2:
+
+LINE/COL ERROR                                                                  
+-------- -----------------------------------------------------------------      
+2/43     PLS-00103: Encountered the symbol "NUMBER" when expecting one of       
+         the following:                                                         
+         := . ) , @ % default character                                         
+         The symbol ":=" was substituted for "NUMBER" to continue.              
+                                                                                
+SQL> PLS-00103: Encountered the symbol "NUMBER" when expecting one of
+SP2-0734: unknown command beginning "PLS-00103:..." - rest of line ignored.
+SQL> the following:
+SP2-0734: unknown command beginning "the follow..." - rest of line ignored.
+SQL> := . ) , @ % default character
+SP2-0734: unknown command beginning ":= . ) , @..." - rest of line ignored.
+SQL> The symbol ":=" was substituted for "NUMBER" to continue. @ e:\prakash\oracle\inout_pro.lst;
+SP2-0734: unknown command beginning "The symbol..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SQL>  @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL>  @ e:\prakash\oracle\inout_s1.sql;
+Enter value for a: 1
+old   2: 	a number:=&a;
+new   2: 	a number:=1;
+Enter value for b: 1
+old   3: 	b number:=&b;
+new   3: 	b number:=1;
+Enter value for c: 1
+old   4: 	c number:=&c;
+new   4: 	c number:=1;
+	sum2(a,b,c);
+	*
+ERROR at line 6:
+ORA-06550: line 6, column 2: 
+PLS-00905: object SCOTT.SUM2 is invalid 
+ORA-06550: line 6, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL>  @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL>  @ e:\prakash\oracle\inout_s1.sql;
+Enter value for a: 1
+old   2: 	a number(2):=&a;
+new   2: 	a number(2):=1;
+Enter value for b: 1
+old   3: 	b number(2):=&b;
+new   3: 	b number(2):=1;
+Enter value for c: 1
+old   4: 	c number(2):=&c;
+new   4: 	c number(2):=1;
+	sum2(a,b,c);
+	*
+ERROR at line 6:
+ORA-06550: line 6, column 2: 
+PLS-00905: object SCOTT.SUM2 is invalid 
+ORA-06550: line 6, column 2: 
+PL/SQL: Statement ignored 
+
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> 
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> show error;
+Errors for PROCEDURE SUM11:
+
+LINE/COL ERROR                                                                  
+-------- -----------------------------------------------------------------      
+2/44     PLS-00103: Encountered the symbol "NUMBER" when expecting one of       
+         the following:                                                         
+         := . ) , @ % default character                                         
+         The symbol ":=" was substituted for "NUMBER" to continue.              
+                                                                                
+SQL>  @ e:\prakash\oracle\inout_pro.lst;
+
+Warning: Procedure created with compilation errors.
+
+SQL> 

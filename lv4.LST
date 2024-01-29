@@ -1,0 +1,110 @@
+ed
+Wrote file afiedt.buf
+
+  1* select * from emp
+SQL> /
+
+     EMPNO EMPNAME    JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+
+     EMPNO EMPNAME    JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+
+14 rows selected.
+
+SQL> select empname,sal,sal+sal from emp;
+
+EMPNAME           SAL    SAL+SAL                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800       1600                                                                                                                      
+ALLEN            1600       3200                                                                                                                      
+WARD             1250       2500                                                                                                                      
+JONES            2975       5950                                                                                                                      
+MARTIN           1250       2500                                                                                                                      
+BLAKE            2850       5700                                                                                                                      
+CLARK            2450       4900                                                                                                                      
+SCOTT            3000       6000                                                                                                                      
+KING             5000      10000                                                                                                                      
+TURNER           1500       3000                                                                                                                      
+ADAMS            1100       2200                                                                                                                      
+
+EMPNAME           SAL    SAL+SAL                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+JAMES             950       1900                                                                                                                      
+FORD             3000       6000                                                                                                                      
+MILLER           1300       2600                                                                                                                      
+
+14 rows selected.
+
+SQL> select empname,sal,sal/30 from emp;
+
+EMPNAME           SAL     SAL/30                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800 26.6666667                                                                                                                      
+ALLEN            1600 53.3333333                                                                                                                      
+WARD             1250 41.6666667                                                                                                                      
+JONES            2975 99.1666667                                                                                                                      
+MARTIN           1250 41.6666667                                                                                                                      
+BLAKE            2850         95                                                                                                                      
+CLARK            2450 81.6666667                                                                                                                      
+SCOTT            3000        100                                                                                                                      
+KING             5000 166.666667                                                                                                                      
+TURNER           1500         50                                                                                                                      
+ADAMS            1100 36.6666667                                                                                                                      
+
+EMPNAME           SAL     SAL/30                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+JAMES             950 31.6666667                                                                                                                      
+FORD             3000        100                                                                                                                      
+MILLER           1300 43.3333333                                                                                                                      
+
+14 rows selected.
+
+SQL> alter table emp rename column empname to ename;
+
+Table altered.
+
+SQL> select * from salary;
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS    TOT_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`SOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        450          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVYA KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+
+      SRNO NAME                      GROSS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS    TOT_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 

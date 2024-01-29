@@ -1,0 +1,213 @@
+select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500      
+        10                                                                      
+                                                                                
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000      
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000      
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> linesize 80
+pagesize 14
+linesize 80
+linesize 80
+linesize 15
+/
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> pagesize 14
+pagesize 14
+linesize 150
+/
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> alter table emp rename column ENAME to EMP_NAME;
+
+Table altered.
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> ALTER TABLE SALARY RENAME BASICPAY TO GROSS AND TOTAL TO TOT_SALFROM;
+ALTER TABLE SALARY RENAME BASICPAY TO GROSS AND TOTAL TO TOT_SALFROM
+                          *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword 
+
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                   BASICPAY         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS      TOTAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+
+15 rows selected.
+
+SQL>  ALTER TABLE SALARY RENAME BASICPAY TO GROSS;
+ ALTER TABLE SALARY RENAME BASICPAY TO GROSS
+                           *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword 
+
+
+SQL>  ALTER TABLE SALARY RENAME BASICPAY TO GROSS ALTER TABLE SALARY RENAM
+  2  ;
+ ALTER TABLE SALARY RENAME BASICPAY TO GROSS ALTER TABLE SALARY RENAM
+                           *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword 
+
+
+SQL>  ALTER TABLE SALARY RENAME COLUMN  BASICPAY TO GROSS AND TOTAL TO TOT_SALFROM;
+ ALTER TABLE SALARY RENAME COLUMN  BASICPAY TO GROSS AND TOTAL TO TOT_SALFROM
+*
+ERROR at line 1:
+ORA-23290: This operation may not be combined with any other operation 
+
+
+SQL>  ALTER TABLE SALARY RENAME COLUMN  BASICPAY TO GROS;
+
+Table altered.
+
+SQL>  ALTER TABLE SALARY RENAME COLUMN  TOTAL TO GROSS_TOTAL;
+
+Table altered.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 

@@ -1,0 +1,8 @@
+--procedure for out parameter
+create or replace procedure
+sum1(s1 in number, s2 in number, s3 in number, ans out number)
+is
+begin
+	ans = s1 + s2 + s3;
+end sum1;
+/

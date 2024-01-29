@@ -1,0 +1,9 @@
+-- procedure create with inout
+create or replace procedure
+sum11(a1 in number, b1 in number, c1 inout number)
+is
+begin
+	c1:=a1 + b1;
+	dbms_output.put_line('sum : ' || c1);
+end sum11;
+/

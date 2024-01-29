@@ -1,0 +1,24 @@
+--program of total using while loop
+set serveroutput on
+declare
+	cursor cemp is select emp_name, deptno, job from emp;
+	xename emp.emp_name%type;
+	xdeptno emp.deptno%type;
+	xjob emp.job%type;
+begin
+	open cemp;
+	fetch cemp into xename, xdeptno, xjob;
+	dbms_output.put_line('cemp % column type');
+	if cemp %isopen
+	then
+		while cemp %found
+		loop
+			dbms_output.put_line(xename||'	'||xdeptno||'	'||xjob);
+			fetch cemp into xename,xdeptno,xjob;
+		end loop;
+	else
+		dbms_output.put_line('cursor not open....^_^....');
+	end if;
+	close cemp;
+end;
+/

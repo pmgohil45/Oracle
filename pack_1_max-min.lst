@@ -1,0 +1,8 @@
+--pex1 package header
+create or replace package pnm
+is
+	function promax(a in number, b in number, c in number)
+	return number;
+	procedure promin(a in number, b in number, c in number);
+end pnm;
+/

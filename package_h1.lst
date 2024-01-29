@@ -1,0 +1,7 @@
+--package header
+create or replace package prakash
+is
+	procedure psq(a in number,  b out number);
+	procedure pcb(x in number,  y out number);
+end prakash;
+/

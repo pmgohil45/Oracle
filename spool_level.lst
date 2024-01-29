@@ -1,0 +1,1355 @@
+select * from salary3;
+select * from salary3
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select* from tab;
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+STUD                           TABLE                                            
+DEPT                           TABLE                                            
+EMP                            TABLE                                            
+BONUS                          TABLE                                            
+SALGRADE                       TABLE                                            
+BOOKS                          TABLE                                            
+ORDER1                         TABLE                                            
+PRODUCT                        TABLE                                            
+SALESDATA                      TABLE                                            
+BCA3                           TABLE                                            
+ORDER3                         TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+ORDER2                         TABLE                                            
+SALARY                         TABLE                                            
+A1                             TABLE                                            
+B1                             TABLE                                            
+PATEL                          VIEW                                             
+ORD_VIEW                       VIEW                                             
+EVENT                          TABLE                                            
+EVENT1                         SYNONYM                                          
+DEPARMENT                      SYNONYM                                          
+DEPARTMENT                     SYNONYM                                          
+POLICIES                       TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+ORDER3_VIEW                    VIEW                                             
+FV1                            VIEW                                             
+GEET_STUD                      TABLE                                            
+COMM1                          TABLE                                            
+F_V1                           VIEW                                             
+ORDER4                         SYNONYM                                          
+COLLAGE                        TABLE                                            
+BIN$d5Y8rFKKSFWyk4ATEvGblQ==$0 TABLE                                            
+BALANCE                        TABLE                                            
+RES                            TABLE                                            
+BIN$ZHpg25oIQI2EGCMQZBNmFg==$0 TABLE                                            
+
+TNAME                          TABTYPE  CLUSTERID                               
+------------------------------ ------- ----------                               
+INSERTDATA                     TABLE                                            
+BALANCE1                       TABLE                                            
+
+35 rows selected.
+
+SQL> pagesize 14
+pagesize 14
+linesize 80
+linesize 80
+linesize 80
+select * from tab;
+
+TNAME                          TABTYPE  CLUSTERID                                                                                                     
+------------------------------ ------- ----------                                                                                                     
+STUD                           TABLE                                                                                                                  
+DEPT                           TABLE                                                                                                                  
+EMP                            TABLE                                                                                                                  
+BONUS                          TABLE                                                                                                                  
+SALGRADE                       TABLE                                                                                                                  
+BOOKS                          TABLE                                                                                                                  
+ORDER1                         TABLE                                                                                                                  
+PRODUCT                        TABLE                                                                                                                  
+SALESDATA                      TABLE                                                                                                                  
+BCA3                           TABLE                                                                                                                  
+ORDER3                         TABLE                                                                                                                  
+ORDER2                         TABLE                                                                                                                  
+SALARY                         TABLE                                                                                                                  
+A1                             TABLE                                                                                                                  
+B1                             TABLE                                                                                                                  
+PATEL                          VIEW                                                                                                                   
+ORD_VIEW                       VIEW                                                                                                                   
+EVENT                          TABLE                                                                                                                  
+EVENT1                         SYNONYM                                                                                                                
+DEPARMENT                      SYNONYM                                                                                                                
+DEPARTMENT                     SYNONYM                                                                                                                
+POLICIES                       TABLE                                                                                                                  
+ORDER3_VIEW                    VIEW                                                                                                                   
+FV1                            VIEW                                                                                                                   
+GEET_STUD                      TABLE                                                                                                                  
+COMM1                          TABLE                                                                                                                  
+F_V1                           VIEW                                                                                                                   
+ORDER4                         SYNONYM                                                                                                                
+COLLAGE                        TABLE                                                                                                                  
+BIN$d5Y8rFKKSFWyk4ATEvGblQ==$0 TABLE                                                                                                                  
+BALANCE                        TABLE                                                                                                                  
+RES                            TABLE                                                                                                                  
+BIN$ZHpg25oIQI2EGCMQZBNmFg==$0 TABLE                                                                                                                  
+INSERTDATA                     TABLE                                                                                                                  
+BALANCE1                       TABLE                                                                                                                  
+
+35 rows selected.
+
+SQL> select sal+100 from salray where job='MANAGER';
+select sal+100 from salray where job='MANAGER'
+                    *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500       15500                        
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0        8000                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0        7999                        
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000       15000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100       73100                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0       20000                        
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0       25000                        
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300       24300                        
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300       16300                        
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0       15000                        
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0       14000                        
+
+15 rows selected.
+
+SQL> SEELCT SAL+100 FROM EMP WHERE JOB='MANAGER';
+SP2-0734: unknown command beginning "SEELCT SAL..." - rest of line ignored.
+SQL> SEELCT * FROM EMP;
+SP2-0734: unknown command beginning "SEELCT * F..." - rest of line ignored.
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> SELECT SAL, SAL+100, EMP_NAME FROM EMP WHERE JOB='MANAGER';
+
+       SAL    SAL+100 EMP_NAME                                                                                                                        
+---------- ---------- ----------                                                                                                                      
+      2975       3075 JONES                                                                                                                           
+      2850       2950 BLAKE                                                                                                                           
+      2450       2550 CLARK                                                                                                                           
+
+SQL> select emp_name, sal, sal+1000-450 from emp;
+
+EMP_NAME          SAL SAL+1000-450                                                                                                                    
+---------- ---------- ------------                                                                                                                    
+SMITH             800         1350                                                                                                                    
+ALLEN            1600         2150                                                                                                                    
+WARD             1250         1800                                                                                                                    
+JONES            2975         3525                                                                                                                    
+MARTIN           1250         1800                                                                                                                    
+BLAKE            2850         3400                                                                                                                    
+CLARK            2450         3000                                                                                                                    
+SCOTT            3000         3550                                                                                                                    
+KING             5000         5550                                                                                                                    
+TURNER           1500         2050                                                                                                                    
+ADAMS            1100         1650                                                                                                                    
+JAMES             950         1500                                                                                                                    
+FORD             3000         3550                                                                                                                    
+MILLER           1300         1850                                                                                                                    
+
+14 rows selected.
+
+SQL> select * from salary where like 'SHILPA%';
+select * from salary where like 'SHILPA%'
+                           *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select * from salary where name like 'SHILPA%';
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+
+SQL> SELECT * FROM SALARY  WHERER NAME LIKE 'S_';
+SELECT * FROM SALARY  WHERER NAME LIKE 'S_'
+                             *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select * from salary where like 'SHILPA%'
+  2  ;
+select * from salary where like 'SHILPA%'
+                           *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL>  SELECT * FROM SALARY  WHERER NAME LIKE 'S%';
+ SELECT * FROM SALARY  WHERER NAME LIKE 'S%'
+                              *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL>  SELECT * FROM SALARY  WHERER NAME LIKE 'S_'
+  2  ED;
+ SELECT * FROM SALARY  WHERER NAME LIKE 'S_'
+                              *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT * FROM SALARY  WHERE NAME LIKE 'S%'
+SQL> /
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+
+SQL> SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD';
+SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD'
+                        *
+ERROR at line 1:
+ORA-00904: "BASIC_PAY": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD'
+SQL> ;
+  1* SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD'
+SQL> ;
+  1* SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD'
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> 
+SQL> /
+SELECT BASIC_PAY, NAME, BASIC_PAY+1000 FROM SALARY WHERE NAME='SAYAD'
+                        *
+ERROR at line 1:
+ORA-00904: "BASIC_PAY": invalid identifier 
+
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500       15500                        
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0        8000                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0        7999                        
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000       15000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100       73100                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0       20000                        
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0       25000                        
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300       24300                        
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300       16300                        
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0       15000                        
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0       14000                        
+
+15 rows selected.
+
+SQL> SELECT * FROM ORDER3;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+08-JAN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+25-JUN-18 EAST    MORGAN   PENCIL           90       4.99      449.1                                                                                  
+12-JUN-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+14 rows selected.
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT GROSS, NAME, GROSS+1000 FROM SALARY WHERE NAME='SAYAD'
+SQL> /
+SELECT GROSS, NAME, GROSS+1000 FROM SALARY WHERE NAME='SAYAD'
+                    *
+ERROR at line 1:
+ORA-00904: "GROSS": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT GROS, NAME, GROS+1000 FROM SALARY WHERE NAME='SAYAD'
+SQL> /
+
+no rows selected
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT GROS, NAME, GROS+1000 FROM SALARY WHERE NAME='SHILPA R'
+SQL> /
+
+      GROS NAME                  GROS+1000                                                                                                            
+---------- -------------------- ----------                                                                                                            
+      3740 SHILPA R                   4740                                                                                                            
+
+SQL> 
+SQL> SELECT ITEM, UNIT_COST, UNIT_COST+3 FROM ORDER3 WHERE ITEM='PENCIL';
+
+ITEM      UNIT_COST UNIT_COST+3                                                                                                                       
+-------- ---------- -----------                                                                                                                       
+PENCIL         1.99        4.99                                                                                                                       
+PENCIL         4.99        7.99                                                                                                                       
+PENCIL         2.99        5.99                                                                                                                       
+PENCIL         1.99        4.99                                                                                                                       
+PENCIL         4.99        7.99                                                                                                                       
+PENCIL         4.99        7.99                                                                                                                       
+PENCIL         4.99        7.99                                                                                                                       
+
+7 rows selected.
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500       15500                        
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0        8000                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0        7999                        
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000       15000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100       73100                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0       20000                        
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0       25000                        
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300       24300                        
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300       16300                        
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0       15000                        
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0       14000                        
+
+15 rows selected.
+
+SQL> SELECT NAME, GROSS_SALARY, GROSS_TOTAL*12*5/100 FROM SALARY ;
+SELECT NAME, GROSS_SALARY, GROSS_TOTAL*12*5/100 FROM SALARY 
+             *
+ERROR at line 1:
+ORA-00904: "GROSS_SALARY": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT NAME, GROSS_TOTAL, GROSS_TOTAL*12*5/100 FROM SALARY 
+SQL> /
+
+NAME                 GROSS_TOTAL GROSS_TOTAL*12*5/100                                                                                                 
+-------------------- ----------- --------------------                                                                                                 
+VINUDAS K.S                15500                 9300                                                                                                 
+DIVAY KUMAR                 8000                 4800                                                                                                 
+SHILPA R                    7734               4640.4                                                                                                 
+SINDHU J.P                  8000                 4800                                                                                                 
+DEEPTHI P.S                 7999               4799.4                                                                                                 
+LIJIN K C                  15000                 9000                                                                                                 
+SAYAD K M                  37000                22200                                                                                                 
+RAJ SHARMA                 73100                43860                                                                                                 
+SHARAD GANDHI              32300                19380                                                                                                 
+DANISH D`DOUZA             20000                12000                                                                                                 
+PAWAN PATIL                25000                15000                                                                                                 
+RIJO PAUL                  24300                14580                                                                                                 
+JOSEPH P                   16300                 9780                                                                                                 
+AAKASH PATEL               15000                 9000                                                                                                 
+GANESH RAHU                14000                 8400                                                                                                 
+
+15 rows selected.
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT NAME, GROSS_TOTAL, GROSS_TOTAL*5/100 FROM SALARY 
+SQL> /
+
+NAME                 GROSS_TOTAL GROSS_TOTAL*5/100                                                                                                    
+-------------------- ----------- -----------------                                                                                                    
+VINUDAS K.S                15500               775                                                                                                    
+DIVAY KUMAR                 8000               400                                                                                                    
+SHILPA R                    7734             386.7                                                                                                    
+SINDHU J.P                  8000               400                                                                                                    
+DEEPTHI P.S                 7999            399.95                                                                                                    
+LIJIN K C                  15000               750                                                                                                    
+SAYAD K M                  37000              1850                                                                                                    
+RAJ SHARMA                 73100              3655                                                                                                    
+SHARAD GANDHI              32300              1615                                                                                                    
+DANISH D`DOUZA             20000              1000                                                                                                    
+PAWAN PATIL                25000              1250                                                                                                    
+RIJO PAUL                  24300              1215                                                                                                    
+JOSEPH P                   16300               815                                                                                                    
+AAKASH PATEL               15000               750                                                                                                    
+GANESH RAHU                14000               700                                                                                                    
+
+15 rows selected.
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500       15500                        
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0        8000                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0        7999                        
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000       15000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100       73100                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0       20000                        
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0       25000                        
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300       24300                        
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300       16300                        
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0       15000                        
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0       14000                        
+
+15 rows selected.
+
+SQL> SELECT * FROM SALARY WHERE SPECIAL='';
+
+no rows selected
+
+SQL>  SELECT * FROM SALARY WHERE SPECIAL='';
+
+no rows selected
+
+SQL>  SELECT * FROM SALARY WHERE SPECIAL='';
+
+no rows selected
+
+SQL>   SELECT * FROM SALARY WHERE SPECIAL=NULL;
+
+no rows selected
+
+SQL> SELECT EMP_NAME,SAL, SAL+SAL FROM EMP;
+
+EMP_NAME          SAL    SAL+SAL                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800       1600                                                                                                                      
+ALLEN            1600       3200                                                                                                                      
+WARD             1250       2500                                                                                                                      
+JONES            2975       5950                                                                                                                      
+MARTIN           1250       2500                                                                                                                      
+BLAKE            2850       5700                                                                                                                      
+CLARK            2450       4900                                                                                                                      
+SCOTT            3000       6000                                                                                                                      
+KING             5000      10000                                                                                                                      
+TURNER           1500       3000                                                                                                                      
+ADAMS            1100       2200                                                                                                                      
+JAMES             950       1900                                                                                                                      
+FORD             3000       6000                                                                                                                      
+MILLER           1300       2600                                                                                                                      
+
+14 rows selected.
+
+SQL> SELECT EMP_NAME, SAL, SAL*2 FROM EMP;
+
+EMP_NAME          SAL      SAL*2                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800       1600                                                                                                                      
+ALLEN            1600       3200                                                                                                                      
+WARD             1250       2500                                                                                                                      
+JONES            2975       5950                                                                                                                      
+MARTIN           1250       2500                                                                                                                      
+BLAKE            2850       5700                                                                                                                      
+CLARK            2450       4900                                                                                                                      
+SCOTT            3000       6000                                                                                                                      
+KING             5000      10000                                                                                                                      
+TURNER           1500       3000                                                                                                                      
+ADAMS            1100       2200                                                                                                                      
+JAMES             950       1900                                                                                                                      
+FORD             3000       6000                                                                                                                      
+MILLER           1300       2600                                                                                                                      
+
+14 rows selected.
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> SELECT EMP_NAME,SAL,SAL/30/8 FROM EMP;
+
+EMP_NAME          SAL   SAL/30/8                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800 3.33333333                                                                                                                      
+ALLEN            1600 6.66666667                                                                                                                      
+WARD             1250 5.20833333                                                                                                                      
+JONES            2975 12.3958333                                                                                                                      
+MARTIN           1250 5.20833333                                                                                                                      
+BLAKE            2850     11.875                                                                                                                      
+CLARK            2450 10.2083333                                                                                                                      
+SCOTT            3000       12.5                                                                                                                      
+KING             5000 20.8333333                                                                                                                      
+TURNER           1500       6.25                                                                                                                      
+ADAMS            1100 4.58333333                                                                                                                      
+JAMES             950 3.95833333                                                                                                                      
+FORD             3000       12.5                                                                                                                      
+MILLER           1300 5.41666667                                                                                                                      
+
+14 rows selected.
+
+SQL> SELECT EMP_NAME, SAL, SAL/30 FROM EMP;
+
+EMP_NAME          SAL     SAL/30                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+SMITH             800 26.6666667                                                                                                                      
+ALLEN            1600 53.3333333                                                                                                                      
+WARD             1250 41.6666667                                                                                                                      
+JONES            2975 99.1666667                                                                                                                      
+MARTIN           1250 41.6666667                                                                                                                      
+BLAKE            2850         95                                                                                                                      
+CLARK            2450 81.6666667                                                                                                                      
+SCOTT            3000        100                                                                                                                      
+KING             5000 166.666667                                                                                                                      
+TURNER           1500         50                                                                                                                      
+ADAMS            1100 36.6666667                                                                                                                      
+JAMES             950 31.6666667                                                                                                                      
+FORD             3000        100                                                                                                                      
+MILLER           1300 43.3333333                                                                                                                      
+
+14 rows selected.
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS GROSS_TOTAL                        
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- -----------                        
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500       15500                        
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0        8000                        
+        11 SHILPA R                   3740        750       1870        370              774        230          0        7734                        
+        12 SINDHU J.P                 4000        800       2000        400              800                     0        8000                        
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0        7999                        
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000       15000                        
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000       37000                        
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100       73100                        
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300       32300                        
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0       20000                        
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0       25000                        
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300       24300                        
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300       16300                        
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0       15000                        
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0       14000                        
+
+15 rows selected.
+
+SQL> ALTER TABLE SALARY RENAME GROSS_TOTAL TO ANNUAL_SAL;
+ALTER TABLE SALARY RENAME GROSS_TOTAL TO ANNUAL_SAL
+                          *
+ERROR at line 1:
+ORA-14155: missing PARTITION or SUBPARTITION keyword 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* ALTER TABLE SALARY RENAME COLUMN GROSS_TOTAL TO ANNUAL_SAL
+SQL> /
+
+Table altered.
+
+SQL> SELECT ANNUAL_SAL FROM SALARY;
+
+ANNUAL_SAL                                                                                                                                            
+----------                                                                                                                                            
+     15500                                                                                                                                            
+      8000                                                                                                                                            
+      7734                                                                                                                                            
+      8000                                                                                                                                            
+      7999                                                                                                                                            
+     15000                                                                                                                                            
+     37000                                                                                                                                            
+     73100                                                                                                                                            
+     32300                                                                                                                                            
+     20000                                                                                                                                            
+     25000                                                                                                                                            
+     24300                                                                                                                                            
+     16300                                                                                                                                            
+     15000                                                                                                                                            
+     14000                                                                                                                                            
+
+15 rows selected.
+
+SQL> SELECT ENAME||'    '||JOB AS COMP_NAME FROM EMP;
+SELECT ENAME||'    '||JOB AS COMP_NAME FROM EMP
+       *
+ERROR at line 1:
+ORA-00904: "ENAME": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT NAME||'    '||JOB AS COMP_NAME FROM EMP
+SQL> /
+SELECT NAME||'    '||JOB AS COMP_NAME FROM EMP
+       *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT EMP_NAME||'    '||JOB AS COMP_NAME FROM EMP
+SQL> /
+
+COMP_NAME                                                                                                                                             
+-----------------------                                                                                                                               
+SMITH    CLERK                                                                                                                                        
+ALLEN    SALESMAN                                                                                                                                     
+WARD    SALESMAN                                                                                                                                      
+JONES    MANAGER                                                                                                                                      
+MARTIN    SALESMAN                                                                                                                                    
+BLAKE    MANAGER                                                                                                                                      
+CLARK    MANAGER                                                                                                                                      
+SCOTT    ANALYST                                                                                                                                      
+KING    PRESIDENT                                                                                                                                     
+TURNER    SALESMAN                                                                                                                                    
+ADAMS    CLERK                                                                                                                                        
+JAMES    CLERK                                                                                                                                        
+FORD    ANALYST                                                                                                                                       
+MILLER    CLERK                                                                                                                                       
+
+14 rows selected.
+
+SQL> SELECT EMP_NAEM||'         '||JOB AS COMP_NAME FROM EMP;
+SELECT EMP_NAEM||'         '||JOB AS COMP_NAME FROM EMP
+       *
+ERROR at line 1:
+ORA-00904: "EMP_NAEM": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT EMP_NAME||'         '||JOB AS COMP_NAME FROM EMP
+SQL> /
+
+COMP_NAME                                                                                                                                             
+----------------------------                                                                                                                          
+SMITH         CLERK                                                                                                                                   
+ALLEN         SALESMAN                                                                                                                                
+WARD         SALESMAN                                                                                                                                 
+JONES         MANAGER                                                                                                                                 
+MARTIN         SALESMAN                                                                                                                               
+BLAKE         MANAGER                                                                                                                                 
+CLARK         MANAGER                                                                                                                                 
+SCOTT         ANALYST                                                                                                                                 
+KING         PRESIDENT                                                                                                                                
+TURNER         SALESMAN                                                                                                                               
+ADAMS         CLERK                                                                                                                                   
+JAMES         CLERK                                                                                                                                   
+FORD         ANALYST                                                                                                                                  
+MILLER         CLERK                                                                                                                                  
+
+14 rows selected.
+
+SQL> SELECT DEPT;
+SELECT DEPT
+          *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT * FROM DEPT;
+
+    DEPTNO DNAME          LOC                                                                                                                         
+---------- -------------- -------------                                                                                                               
+        10 ACCOUNTING     NEW YORK                                                                                                                    
+        20 RESEARCH       DALLAS                                                                                                                      
+        30 SALES          CHICAGO                                                                                                                     
+        40 OPERATIONS     BOSTON                                                                                                                      
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FRIN EMP;
+SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FRIN EMP
+                                                                                          *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FROM EMP
+SQL> /
+
+EMP_NAME||'IS'||JOB||'ISWORKINGINDEPTNO'||DEPTNO||'SINCE'||HIREDATE                                                                                   
+-----------------------------------------------------------------------------------------------------                                                 
+SMITH is CLERK is working in dept no20 SINCE 17-DEC-80                                                                                                
+ALLEN is SALESMAN is working in dept no30 SINCE 20-FEB-81                                                                                             
+WARD is SALESMAN is working in dept no30 SINCE 22-FEB-81                                                                                              
+JONES is MANAGER is working in dept no20 SINCE 02-APR-81                                                                                              
+MARTIN is SALESMAN is working in dept no30 SINCE 28-SEP-81                                                                                            
+BLAKE is MANAGER is working in dept no30 SINCE 01-MAY-81                                                                                              
+CLARK is MANAGER is working in dept no10 SINCE 09-JUN-81                                                                                              
+SCOTT is ANALYST is working in dept no20 SINCE 19-APR-87                                                                                              
+KING is PRESIDENT is working in dept no10 SINCE 17-NOV-81                                                                                             
+TURNER is SALESMAN is working in dept no30 SINCE 08-SEP-81                                                                                            
+ADAMS is CLERK is working in dept no20 SINCE 23-MAY-87                                                                                                
+JAMES is CLERK is working in dept no30 SINCE 03-DEC-81                                                                                                
+FORD is ANALYST is working in dept no20 SINCE 03-DEC-81                                                                                               
+MILLER is CLERK is working in dept no10 SINCE 23-JAN-82                                                                                               
+
+14 rows selected.
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FROM EMP WHERE NAME='SMITH'
+SQL> /
+SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FROM EMP WHERE NAME='SMITH'
+                                                                                                    *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT EMP_NAME||' is '||JOB||' is working in dept no'|| DEPTNO||' SINCE '||HIREDATE FROM EMP WHERE EMP_NAME='SMITH'
+SQL> /
+
+EMP_NAME||'IS'||JOB||'ISWORKINGINDEPTNO'||DEPTNO||'SINCE'||HIREDATE                                                                                   
+-----------------------------------------------------------------------------------------------------                                                 
+SMITH is CLERK is working in dept no20 SINCE 17-DEC-80                                                                                                
+
+SQL> SELECT GROS+DA+HRA+CONVEYANCE+MEDICAL_;
+SELECT GROS+DA+HRA+CONVEYANCE+MEDICAL_
+                                     *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT * FROM SALARY;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+
+15 rows selected.
+
+SQL> > SELECT GROS+DA+HRA+CONVEYANCE+MEDICAL_EXPENSES FROM SALARY;
+SP2-0734: unknown command beginning "> SELECT G..." - rest of line ignored.
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT GROS+DA+HRA+CONVEYANCE+MEDICAL_EXPENSES FROM SALARY
+SQL> /
+
+GROS+DA+HRA+CONVEYANCE+MEDICAL_EXPENSES                                                                                                               
+---------------------------------------                                                                                                               
+                                  13850                                                                                                               
+                                   8000                                                                                                               
+                                   7504                                                                                                               
+                                   8000                                                                                                               
+                                   8029                                                                                                               
+                                  12550                                                                                                               
+                                  32600                                                                                                               
+                                  53850                                                                                                               
+                                  28350                                                                                                               
+                                  19250                                                                                                               
+                                  24100                                                                                                               
+                                  21050                                                                                                               
+                                  13850                                                                                                               
+                                  14550                                                                                                               
+                                  13700                                                                                                               
+
+15 rows selected.
+
+SQL> SELECT DISTINCT DEPTNO FROM EMP;
+
+    DEPTNO                                                                                                                                            
+----------                                                                                                                                            
+        30                                                                                                                                            
+        20                                                                                                                                            
+        10                                                                                                                                            
+
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> SELECT * FROM EMP WHERE JOB='MANAGER' AND COMM=NULL;
+
+no rows selected
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* SELECT * FROM EMP WHERE JOB='MANAGER' AND COMM=' '
+SQL> /
+SELECT * FROM EMP WHERE JOB='MANAGER' AND COMM=' '
+                                               *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> //LEVEL-5
+SELECT * FROM EMP WHERE JOB='MANAGER' AND COMM=' '
+                                               *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> select * from emp order by annual_sal, sal desc;
+select * from emp order by annual_sal, sal desc
+                           *
+ERROR at line 1:
+ORA-00904: "ANNUAL_SAL": invalid identifier 
+
+
+SQL> select * from emp;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from salary order by annual_sal desc;
+SQL> /
+select * from salary order by annual_sal desc;
+                                             *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from salary order by annual_sal desc
+SQL> /
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+
+15 rows selected.
+
+SQL> select * from order;
+select * from order
+              *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> select * form order3;
+select * form order3
+         *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select * from order ;
+select * from order 
+              *
+ERROR at line 1:
+ORA-00903: invalid table name 
+
+
+SQL> select * from order3;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+08-JAN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+25-JUN-18 EAST    MORGAN   PENCIL           90       4.99      449.1                                                                                  
+12-JUN-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+14 rows selected.
+
+SQL> select * from order3 order by orderdate asc;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+08-JAN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+12-JUN-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+25-JUN-18 EAST    MORGAN   PENCIL           90       4.99      449.1                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+14 rows selected.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from emp order by job asc
+SQL> /
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+
+14 rows selected.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from emp order by job asc
+SQL> select * from order3;
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+08-JAN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+25-JUN-18 EAST    MORGAN   PENCIL           90       4.99      449.1                                                                                  
+12-JUN-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+14 rows selected.
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from order3 order by item asc
+SQL> /
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+01-APR-18 EAST    JONES    BINDER           60       4.99      299.4                                                                                  
+29-JUL-18 EAST    PARENT   BINDER           81      19.99    1619.19                                                                                  
+12-JUN-18 EAST    HOWARD   BINDER           29       1.99      57.71                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+08-JAN-18 EAST    JONES    BINDER           60       8.99      539.4                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+15-AUG-18 EAST    JONES    PENCIL           35       4.99     174.65                                                                                  
+25-JUN-18 EAST    MORGAN   PENCIL           90       4.99      449.1                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+15-MAR-18 WEST    SORVINO  PENCIL           56       2.99     167.44                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+06-JAN-18 EAST    JONES    PENCIL           95       1.99     189.05                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+
+14 rows selected.
+
+SQL> select dname, deptno from dept where dept>20;
+select dname, deptno from dept where dept>20
+                                     *
+ERROR at line 1:
+ORA-00904: "DEPT": invalid identifier 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select dname, deptno from dept where deptno>20
+SQL> /
+
+DNAME              DEPTNO                                                                                                                             
+-------------- ----------                                                                                                                             
+SALES                  30                                                                                                                             
+OPERATIONS             40                                                                                                                             
+
+SQL> select * from emp where comm>sal;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+SQL> select * from salary where da<hra;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+
+15 rows selected.
+
+SQL> select * from salary where sal between 50000 and 80000;
+select * from salary where sal between 50000 and 80000
+                           *
+ERROR at line 1:
+ORA-00904: "SAL": invalid identifier 
+
+
+SQL> select * from salary;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+
+15 rows selected.
+
+SQL> select * from salary where annual_sal between 50000 and 80000;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+
+SQL> select * from salary where check srno(6,8,12,15);
+select * from salary where check srno(6,8,12,15)
+                           *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from salary where srno in(6,8,12,15)
+SQL> /
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+
+SQL> selecr * from emp where job in('MANAGER','PRESIDENT','ANALYST');
+SP2-0734: unknown command beginning "selecr * f..." - rest of line ignored.
+SQL> SELECT * FROM EMP;
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300      13000         10                                                                 
+
+14 rows selected.
+
+SQL> ED;
+Wrote file afiedt.buf
+
+  1* select * from emp where job in('MANAGER','PRESIDENT','ANALYST');
+SQL> /
+select * from emp where job in('MANAGER','PRESIDENT','ANALYST');
+                                                               *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select * from emp where job in('MANAGER','PRESIDENT','ANALYST')
+SQL> /
+
+     EMPNO EMP_NAME   JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450      24500         10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000      50000         10                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+
+6 rows selected.
+
+SQL> select item, units, unit_cost from salary order by unit_cost asc;
+select item, units, unit_cost from salary order by unit_cost asc
+                    *
+ERROR at line 1:
+ORA-00904: "UNIT_COST": invalid identifier 
+
+
+SQL> select * from salary;
+
+      SRNO NAME                       GROS         DA        HRA CONVEYANCE MEDICAL_EXPENSES    SPECIAL      BONUS ANNUAL_SAL                         
+---------- -------------------- ---------- ---------- ---------- ---------- ---------------- ---------- ---------- ----------                         
+         9 VINUDAS K.S                7000       1400       3500        700             1250        150       1500      15500                         
+        10 DIVAY KUMAR                4000        800       2000        400              800                     0       8000                         
+        11 SHILPA R                   3740        750       1870        370              774        230          0       7734                         
+        12 SINDHU J.P                 4000        800       2000        400              800                     0       8000                         
+        13 DEEPTHI P.S                4000        800       2000        480              749        270          0       7999                         
+        14 LIJIN K C                  6500       1300       3250        500             1000        450       2000      15000                         
+        15 SAYAD K M                 17500       3500       8750       1600             1250       2400       2000      37000                         
+         1 RAJ SHARMA                30000       6000      15000       1600             1250       6150      13100      73100                         
+         2 SHARAD GANDHI             15000       3000       7500       1600             1250       1650       2300      32300                         
+         3 DANISH D`DOUZA            10000       2000       5000       1000             1250        750          0      20000                         
+         4 PAWAN PATIL               12500       2500       6250       1600             1250        900          0      25000                         
+         5 RIJO PAUL                 11000       2200       5500       1100             1250        950       2300      24300                         
+         6 JOSEPH P                   7000       1400       3500        700             1250        150       2300      16300                         
+         7 AAKASH PATEL               7500       1500       3750        600             1200        300          0      15000                         
+         8 GANESH RAHU                7000       1400       3500        600             1200        300          0      14000                         
+
+15 rows selected.
+
+SQL>  ed;
+Wrote file afiedt.buf
+
+  1* elect item, units, unit_cost from order3 order by unit_cost asc
+SQL> /
+elect item, units, unit_cost from order3 order by unit_cost asc
+*
+ERROR at line 1:
+ORA-00900: invalid SQL statement 
+
+
+SQL> ed;
+Wrote file afiedt.buf
+
+  1* select item, units, unit_cost from order3 order by unit_cost asc
+SQL> /
+
+ITEM          UNITS  UNIT_COST                                                                                                                        
+-------- ---------- ----------                                                                                                                        
+PENCIL           95       1.99                                                                                                                        
+PENCIL           75       1.99                                                                                                                        
+BINDER           29       1.99                                                                                                                        
+PENCIL           56       2.99                                                                                                                        
+PENCIL           36       4.99                                                                                                                        
+BINDER           60       4.99                                                                                                                        
+PENCIL           35       4.99                                                                                                                        
+PENCIL           95       4.99                                                                                                                        
+PENCIL           90       4.99                                                                                                                        
+BINDER           60       8.99                                                                                                                        
+BINDER           81      19.99                                                                                                                        
+PEN              27      19.99                                                                                                                        
+BINDER           50      19.99                                                                                                                        
+DESK              2        125                                                                                                                        
+
+14 rows selected.
+
+SQL> select * from order3 where region='CENTRAL';
+
+ORDERDATE REGION  REP      ITEM          UNITS  UNIT_COST      TOTAL                                                                                  
+--------- ------- -------- -------- ---------- ---------- ----------                                                                                  
+23-JAN-18 CENTRAL KIVELL   BINDER           50      19.99      999.5                                                                                  
+09-FEB-18 CENTRAL JARDINE  PENCIL           36       4.99     179.64                                                                                  
+26-FEB-18 CENTRAL GILL     PEN              27      19.99     539.73                                                                                  
+18-APR-18 CENTRAL ANDREWS  PENCIL           75       1.99     149.25                                                                                  
+05-MAY-18 CENTRAL JARDINE  PENCIL           95       4.99      449.1                                                                                  
+01-SEP-18 CENTRAL SMITH    DESK              2        125        250                                                                                  
+
+6 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 

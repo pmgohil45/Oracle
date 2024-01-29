@@ -1,0 +1,341 @@
+alter table salary rename column tot_sal to annualsal;
+
+Table altered.
+
+SQL> select distinct * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0      
+        30                                                                      
+                                                                                
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                 
+        20                                                                      
+                                                                                
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                 
+        20                                                                      
+                                                                                
+      7369 SMITH      CLERK           7902 17-DEC-80        800                 
+        20                                                                      
+                                                                                
+      7566 JONES      MANAGER         7839 02-APR-81       2975                 
+        20                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                 
+        20                                                                      
+                                                                                
+      7900 JAMES      CLERK           7698 03-DEC-81        950                 
+        30                                                                      
+                                                                                
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500      
+        30                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                 
+        30                                                                      
+                                                                                
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                 
+        10                                                                      
+                                                                                
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                 
+        10                                                                      
+                                                                                
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM      
+---------- ---------- --------- ---------- --------- ---------- ----------      
+    DEPTNO                                                                      
+----------                                                                      
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300      
+        30                                                                      
+                                                                                
+      7839 KING       PRESIDENT            17-NOV-81       5000                 
+        10                                                                      
+                                                                                
+
+14 rows selected.
+
+SQL> linesize 80
+linesize 80
+/
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+
+14 rows selected.
+
+SQL> select distinct deptno from emp;
+
+    DEPTNO                                                                                                                                            
+----------                                                                                                                                            
+        30                                                                                                                                            
+        20                                                                                                                                            
+        10                                                                                                                                            
+
+SQL> select * from emp where comm=NULL and job='MANAGER';
+
+no rows selected
+
+SQL>  select * from emp where comm=
+  2  'NULL'  and job='MANAGER';
+
+no rows selected
+
+SQL> select * from emp where job='MANAGER' and comm=NULL;
+
+no rows selected
+
+SQL> select deptno,concat(empno,'',ename) AS employee from emp;
+select deptno,concat(empno,'',ename) AS employee from emp
+              *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> show error
+No errors.
+SQL> select concat(empno,'',ename) AS employee from emp;
+select concat(empno,'',ename) AS employee from emp
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> select empno ||' '|| ename AS employee from emp;
+
+EMPLOYEE                                                                                                                                              
+---------------------------------------------------                                                                                                   
+7369 SMITH                                                                                                                                            
+7499 ALLEN                                                                                                                                            
+7521 WARD                                                                                                                                             
+7566 JONES                                                                                                                                            
+7654 MARTIN                                                                                                                                           
+7698 BLAKE                                                                                                                                            
+7782 CLARK                                                                                                                                            
+7788 SCOTT                                                                                                                                            
+7839 KING                                                                                                                                             
+7844 TURNER                                                                                                                                           
+7876 ADAMS                                                                                                                                            
+
+EMPLOYEE                                                                                                                                              
+---------------------------------------------------                                                                                                   
+7900 JAMES                                                                                                                                            
+7902 FORD                                                                                                                                             
+7934 MILLER                                                                                                                                           
+
+14 rows selected.
+
+SQL> desc emp;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ EMPNO                                                                               NOT NULL NUMBER(4)
+ ENAME                                                                                        VARCHAR2(10)
+ JOB                                                                                          VARCHAR2(9)
+ MGR                                                                                          NUMBER(4)
+ HIREDATE                                                                                     DATE
+ SAL                                                                                          NUMBER(7,2)
+ COMM                                                                                         NUMBER(7,2)
+ DEPTNO                                                                                       NUMBER(2)
+
+SQL> selcet ename||'is'||job||'and he is working in '||deptno from emp;
+SP2-0734: unknown command beginning "selcet ena..." - rest of line ignored.
+SQL> select ename||'is'||job||'and he is working in '||deptno from emp;
+
+ENAME||'IS'||JOB||'ANDHEISWORKINGIN'||DEPTNO                                                                                                          
+----------------------------------------------------------------------------------                                                                    
+SMITHisCLERKand he is working in 20                                                                                                                   
+ALLENisSALESMANand he is working in 30                                                                                                                
+WARDisSALESMANand he is working in 30                                                                                                                 
+JONESisMANAGERand he is working in 20                                                                                                                 
+MARTINisSALESMANand he is working in 30                                                                                                               
+BLAKEisMANAGERand he is working in 30                                                                                                                 
+CLARKisMANAGERand he is working in 10                                                                                                                 
+SCOTTisANALYSTand he is working in 20                                                                                                                 
+KINGisPRESIDENTand he is working in 10                                                                                                                
+TURNERisSALESMANand he is working in 30                                                                                                               
+ADAMSisCLERKand he is working in 20                                                                                                                   
+
+ENAME||'IS'||JOB||'ANDHEISWORKINGIN'||DEPTNO                                                                                                          
+----------------------------------------------------------------------------------                                                                    
+JAMESisCLERKand he is working in 30                                                                                                                   
+FORDisANALYSTand he is working in 20                                                                                                                  
+MILLERisCLERKand he is working in 10                                                                                                                  
+
+14 rows selected.
+
+SQL> desc salary;
+ Name                                                                                Null?    Type
+ ----------------------------------------------------------------------------------- -------- --------------------------------------------------------
+ SRNO                                                                                NOT NULL NUMBER(2)
+ NAME                                                                                NOT NULL VARCHAR2(20)
+ GROSS                                                                                        NUMBER(5)
+ DA                                                                                           NUMBER(4)
+ HRA                                                                                          NUMBER(5)
+ CONVEYANCE                                                                                   NUMBER(5)
+ MEDICAL_EXPENSES                                                                             NUMBER(4)
+ SPECIAL                                                                                      NUMBER(4)
+ BONUS                                                                                        NUMBER(5)
+ ANNUALSAL                                                                                    NUMBER(6)
+
+SQL> select gross+da+hra+conveyance+medical_expenses from salary;
+
+GROSS+DA+HRA+CONVEYANCE+MEDICAL_EXPENSES                                                                                                              
+----------------------------------------                                                                                                              
+                                   53850                                                                                                              
+                                   28350                                                                                                              
+                                   19250                                                                                                              
+                                   24100                                                                                                              
+                                   21050                                                                                                              
+                                   13850                                                                                                              
+                                   14550                                                                                                              
+                                   13700                                                                                                              
+                                   13850                                                                                                              
+                                    8000                                                                                                              
+                                    7504                                                                                                              
+
+GROSS+DA+HRA+CONVEYANCE+MEDICAL_EXPENSES                                                                                                              
+----------------------------------------                                                                                                              
+                                    8000                                                                                                              
+                                    8029                                                                                                              
+                                   12550                                                                                                              
+                                   32600                                                                                                              
+
+15 rows selected.
+
+SQL> select * from emp where comm=null and job='MANAGER';
+
+no rows selected
+
+SQL> select ename||' '||job from emp;
+
+ENAME||''||JOB                                                                                                                                        
+--------------------                                                                                                                                  
+SMITH CLERK                                                                                                                                           
+ALLEN SALESMAN                                                                                                                                        
+WARD SALESMAN                                                                                                                                         
+JONES MANAGER                                                                                                                                         
+MARTIN SALESMAN                                                                                                                                       
+BLAKE MANAGER                                                                                                                                         
+CLARK MANAGER                                                                                                                                         
+SCOTT ANALYST                                                                                                                                         
+KING PRESIDENT                                                                                                                                        
+TURNER SALESMAN                                                                                                                                       
+ADAMS CLERK                                                                                                                                           
+
+ENAME||''||JOB                                                                                                                                        
+--------------------                                                                                                                                  
+JAMES CLERK                                                                                                                                           
+FORD ANALYST                                                                                                                                          
+MILLER CLERK                                                                                                                                          
+
+14 rows selected.
+
+SQL> select ename||' '||job as comp_name from emp;
+
+COMP_NAME                                                                                                                                             
+--------------------                                                                                                                                  
+SMITH CLERK                                                                                                                                           
+ALLEN SALESMAN                                                                                                                                        
+WARD SALESMAN                                                                                                                                         
+JONES MANAGER                                                                                                                                         
+MARTIN SALESMAN                                                                                                                                       
+BLAKE MANAGER                                                                                                                                         
+CLARK MANAGER                                                                                                                                         
+SCOTT ANALYST                                                                                                                                         
+KING PRESIDENT                                                                                                                                        
+TURNER SALESMAN                                                                                                                                       
+ADAMS CLERK                                                                                                                                           
+
+COMP_NAME                                                                                                                                             
+--------------------                                                                                                                                  
+JAMES CLERK                                                                                                                                           
+FORD ANALYST                                                                                                                                          
+MILLER CLERK                                                                                                                                          
+
+14 rows selected.
+
+SQL> select concat(ename,job) as comp_name from emp;
+
+COMP_NAME                                                                                                                                             
+-------------------                                                                                                                                   
+SMITHCLERK                                                                                                                                            
+ALLENSALESMAN                                                                                                                                         
+WARDSALESMAN                                                                                                                                          
+JONESMANAGER                                                                                                                                          
+MARTINSALESMAN                                                                                                                                        
+BLAKEMANAGER                                                                                                                                          
+CLARKMANAGER                                                                                                                                          
+SCOTTANALYST                                                                                                                                          
+KINGPRESIDENT                                                                                                                                         
+TURNERSALESMAN                                                                                                                                        
+ADAMSCLERK                                                                                                                                            
+
+COMP_NAME                                                                                                                                             
+-------------------                                                                                                                                   
+JAMESCLERK                                                                                                                                            
+FORDANALYST                                                                                                                                           
+MILLERCLERK                                                                                                                                           
+
+14 rows selected.
+
+SQL> select concat(ename,' ',job) as comp_name from emp;
+select concat(ename,' ',job) as comp_name from emp
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL>  select concat(ename,_____,job) as comp_name from emp;
+ select concat(ename,_____,job) as comp_name from emp
+                     *
+ERROR at line 1:
+ORA-00911: invalid character 
+
+
+SQL> ed
+Wrote file afiedt.buf
+
+  1*  select concat(ename,'_____',job) as comp_name from emp
+SQL> /
+ select concat(ename,'_____',job) as comp_name from emp
+        *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> 

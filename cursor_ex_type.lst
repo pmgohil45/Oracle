@@ -1,0 +1,19 @@
+--program to print reored to explicit cursor.
+set serveroutput on
+declare 
+	xloc dept.loc%type;
+	dno dept.deptno%type;
+	cursor c1 is select deptno, loc from dept;
+begin
+	open c1;
+	if c1%isopen
+	then
+		fetch c1 into dno,xloc;
+		dbms_output.put_line('dept no = '||dno);
+		dbms_output.put_line('location = '||xloc);
+	close c1;
+	else
+		dbms_output.put_line('not open cursor');
+	end if;
+end;
+/

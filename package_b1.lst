@@ -1,0 +1,15 @@
+-- package body
+create or replace package body prakash
+is
+	procedure psq(a in number, b out number)
+	is
+	begin
+		b := a * a;
+	end psq;
+	procedure pcb(x in number, y out number)
+	is
+	begin
+		y := x * x * x;
+	end pcb;
+end prakash;
+/

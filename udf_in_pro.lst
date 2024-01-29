@@ -1,0 +1,12 @@
+-- function with IN parameter
+
+create or replace function 
+total(a in number, b in number, c in number) 
+return number
+is
+	ans number;
+begin
+	ans := a+b+c;
+	return ans;
+end total;
+/

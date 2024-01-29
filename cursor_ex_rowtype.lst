@@ -1,0 +1,18 @@
+--print first record of dept table using explicit cursor and use %ROWTYPE
+set serveroutput on
+declare
+	xdata dept%rowtype;
+	cursor c2 is select * from dept;
+begin
+open c2;
+if c2%isopen
+then
+	fetch c2 into xdata;
+	dbms_output.put_line('dept no = '||xdata.deptno);
+	dbms_output.put_line('location = '||xdata.loc);
+	close c2;
+else
+	dbms_output.put_line('cursor is off');
+end if;
+end;
+/

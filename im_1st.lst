@@ -1,0 +1,13 @@
+--implicit cursor calling 
+set serveroutput on
+declare
+	xid number := &xid;
+	xm3 number := &xm3;
+begin
+	update result set m3=xm3 where id=xid;
+	if sql%found
+	then
+		dbms_output.put_line('record updated...^_^...');
+	end if;
+end;
+/

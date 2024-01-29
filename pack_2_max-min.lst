@@ -1,0 +1,42 @@
+--body of package
+create or replace package body pnm
+is
+	function promax(a in number, b in number, c in number)
+	return number
+	is
+		mx number;
+	begin
+		if a>b and a>c
+		then
+			mx:=a;
+			return mx;
+		else if b>a and b>c
+		then
+			mx:=b;
+			return mx;
+		else
+			mx:=c;
+			return mx;
+		end if;
+		end if;
+	end promax;
+	
+	procedure promin(a in number, b in number, c in number)
+	is
+		mi number;
+	begin
+		if a<b and a<c
+		then
+			mi:=a;
+		else if b<a and b<c
+		then
+			mi:=b;
+		else
+			mi:=c;
+		end if;
+		end if;
+	
+		dbms_output.put_line('min = '||mi);
+	end promin;
+end pnm;
+/
